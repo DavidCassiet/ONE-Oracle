@@ -1,9 +1,5 @@
 <meta charset="UTF-8" />
 
-<!-- Juan was born in the year 2000
-   Pedro was born in the year 1995 
-   Carlos was born in the year 2005 -->
-
 <script>
   let currentYear = 2022;
 
@@ -17,4 +13,45 @@
   document.write("<br>");
   document.write("<br>");
   document.write("Carlos have: " + (currentYear - 2005) + " years old.");
+  document.write("<br>");
+  document.write("<br>");
+  document.write("<br>");
+  document.write("<br>");
+
+  currentYear = 2020;
+
+  document.write("Jimena have: " + (currentYear - 2010) + " years old.");
+  document.write("<br>");
+  document.write("<br>");
+  document.write("Paola have: " + (currentYear - 1995) + " years old.");
+  document.write("<br>");
+  document.write("<br>");
+  document.write("Laura have: " + (currentYear - 2005) + " years old.");
+  document.write("<br>");
+  document.write("<br>");
+
+  let jimenaAge = currentYear - 2010;
+  let paolaAge = currentYear - 1995;
+  let lauraAge = currentYear - 2005;
+
+  let name1 = "Jimena";
+  let name2 = "Paola";
+  let name3 = "Laura";
+
+  let average = Math.round((jimenaAge + paolaAge + lauraAge) / 3);
+
+  document.write(
+    "The average of the ages of " +
+      name1 +
+      ", " +
+      name2 +
+      " and " +
+      name3 +
+      " is: " +
+      average
+  );
+
+  // document.write(
+  //   `The average of the ages of ${name1}, ${name2} and ${name3} is: ${average}`
+  // );
 </script>
