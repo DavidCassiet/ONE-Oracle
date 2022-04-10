@@ -1,22 +1,30 @@
 <meta charset="UTF-8" />
 
+<h1>PROGRAM</h1>
+
 <script>
   function jumpLine() {
     document.write("<br />");
     document.write("<br />");
     document.write("<br />");
   }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
 
   let currentYear = 2022;
 
-  document.write("Juan have: " + (currentYear - 2000) + " years old.");
-  jumpLine();
-  document.write("Pedro have: " + (currentYear - 1995) + " years old.");
+  print("Hello friends");
+
+  // This code calculates the ages of Juan, Pedro and Carlos.
+
+  print("Juan have: " + (currentYear - 2000) + " years old.");
+  print("Pedro have: " + (currentYear - 1995) + " years old.");
 
   currentYear = 2030;
 
-  jumpLine();
-  document.write("Carlos have: " + (currentYear - 2005) + " years old.");
+  print("Carlos have: " + (currentYear - 2005) + " years old.");
 </script>
 
 <!-- document.write("<br>");
