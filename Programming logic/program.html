@@ -1,18 +1,25 @@
 <meta charset="UTF-8" />
 
 <script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+
   let currentYear = 2022;
-  let lineaBreaks = "<br /> <br />";
 
   document.write("Juan have: " + (currentYear - 2000) + " years old.");
-  document.write(lineaBreaks);
+  jumpLine();
   document.write("Pedro have: " + (currentYear - 1995) + " years old.");
 
   currentYear = 2030;
 
-  document.write(lineaBreaks);
+  jumpLine();
   document.write("Carlos have: " + (currentYear - 2005) + " years old.");
-  document.write("<br>");
+</script>
+
+<!-- document.write("<br>");
   document.write("<br>");
   document.write("<br>");
   document.write("<br>");
@@ -45,9 +52,7 @@
       name3 +
       " is: " +
       average
-  );
+  ); -->
 
-  // document.write(
-  //   `The average of the ages of ${name1}, ${name2} and ${name3} is: ${average}`
-  // );
-</script>
+<!-- document.write( `The average of the ages of ${name1}, ${name2} and ${name3} is:
+${average}` ); -->
