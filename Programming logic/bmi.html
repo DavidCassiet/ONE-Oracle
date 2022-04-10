@@ -1,0 +1,52 @@
+<meta charset="UTF-8" />
+
+<h1>BMI CALCULATOR PROGRAM</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+  function calculateBmi(weight, height) {
+    let bmi = weight / (height * height);
+    return bmi;
+  }
+  function calculateAverage(bmi1, bmi2) {
+    let average = (bmi1 + bmi2) / 2;
+    return average;
+  }
+
+  let bmi1 = calculateBmi(71, 1.72);
+  let bmi2 = calculateBmi(75, 1.73);
+  let bmi3 = calculateBmi(65, 1.68);
+  let bmi4 = calculateBmi(55, 1.6);
+
+  print(
+    "The average of Christian and Felipe is: " + calculateAverage(bmi1, bmi2)
+  );
+  print(
+    "The average of Gabriela and Luisa is: " + calculateAverage(bmi3, bmi4)
+  );
+
+  //   function calculateBmi(name, weight, height) {
+  //     let bmi = weight / (height ^ 2);
+  //     print(name + "'s bmi is: " + bmi);
+  //   }
+  //   function calculateAverage(name1, weight1, height1, name2, weight2, height2) {
+  //     let bmi1 = weight1 / (height1 ^ 2);
+  //     let bmi2 = weight2 / (height2 ^ 2);
+  //     let average = (bmi1 + bmi2) / 2;
+  //     print(
+  //       "The average of the bmi of " + name1 + "and" + name2 + " is: " + average
+  //     );
+  //   }
+
+  //   calculateBmi("Christian", 71, 1.72);
+  //   calculateBmi("Felipe", 75, 1.73);
+  //   calculateAverage("Christian", 71, 1.72, "Felipe", 75, 1.73);
+</script>

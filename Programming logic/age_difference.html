@@ -1,0 +1,18 @@
+<meta charset="UTF-8" />
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+  function ageDifference(age1, age2) {
+    let difference = age1 - age2;
+    print("Our age difference is: " + difference);
+  }
+
+  ageDifference(30, 16);
+  ageDifference(25, 34);
+</script>
