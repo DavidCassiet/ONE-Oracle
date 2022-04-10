@@ -1,0 +1,21 @@
+<meta charset="UTF-8" />
+<html>
+  <h3>Alcohol or gasoline?</h3>
+  <script>
+    let tank = 40;
+    let gasolinePath = 480;
+    let alcoholPath = 300;
+    let gasolineConsumption = gasolinePath / tank;
+    let alcoholConsumption = alcoholPath / tank;
+
+    document.write(
+      "The consumption with gasoline is: " +
+        gasolineConsumption +
+        " gasoline/km." +
+        "<br />"
+    );
+    document.write(
+      "The consumption with alcohol is: " + alcoholConsumption + " alcohol/km."
+    );
+  </script>
+</html>
