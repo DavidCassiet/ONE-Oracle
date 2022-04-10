@@ -20,33 +20,19 @@
     let average = (bmi1 + bmi2) / 2;
     return average;
   }
+  let name = prompt("Enter your name:");
+  let weight = prompt(name + ", enter your weight:");
+  let height = prompt(name + ", enter your height:");
+  let calculatedBmi = calculateBmi(weight, height);
 
-  let bmi1 = calculateBmi(71, 1.72);
-  let bmi2 = calculateBmi(75, 1.73);
-  let bmi3 = calculateBmi(65, 1.68);
-  let bmi4 = calculateBmi(55, 1.6);
+  print(name + "'s calculated BMI is: " + calculatedBmi);
 
-  print(
-    "The average of Christian and Felipe is: " + calculateAverage(bmi1, bmi2)
-  );
-  print(
-    "The average of Gabriela and Luisa is: " + calculateAverage(bmi3, bmi4)
-  );
-
-  //   function calculateBmi(name, weight, height) {
-  //     let bmi = weight / (height ^ 2);
-  //     print(name + "'s bmi is: " + bmi);
-  //   }
-  //   function calculateAverage(name1, weight1, height1, name2, weight2, height2) {
-  //     let bmi1 = weight1 / (height1 ^ 2);
-  //     let bmi2 = weight2 / (height2 ^ 2);
-  //     let average = (bmi1 + bmi2) / 2;
-  //     print(
-  //       "The average of the bmi of " + name1 + "and" + name2 + " is: " + average
-  //     );
-  //   }
-
-  //   calculateBmi("Christian", 71, 1.72);
-  //   calculateBmi("Felipe", 75, 1.73);
-  //   calculateAverage("Christian", 71, 1.72, "Felipe", 75, 1.73);
+  //   print(
+  //     "The average of Christian and Felipe is: " +
+  //       calculateAverage(calculateBmi(71, 1.72), calculateBmi(75, 1.73))
+  //   );
+  //   print(
+  //     "The average of Gabriela and Luisa is: " +
+  //       calculateAverage(calculateBmi(65, 1.68), calculateBmi(55, 1.6))
+  //   );
 </script>
