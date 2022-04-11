@@ -13,5 +13,13 @@
     jumpLine();
   }
 
-  
+  let members = parseInt(prompt("Enter the number of family members:"));
+  let sum = 0;
+
+  for (let counter = 1; counter <= members; counter++) {
+    let age = parseInt(prompt("Enter member's age: "));
+    sum = sum + age;
+  }
+
+  print("The average is: " + sum / members);
 </script>

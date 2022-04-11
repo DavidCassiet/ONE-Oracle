@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: EVEN NUMBERS BETWEEN 1 - 100</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  let counter1 = 1;
+  let counter2 = 2;
+
+  while (counter1 <= 100) {
+    if (counter1 % 2 == 0) {
+      print(counter1);
+    }
+    counter1++;
+  }
+  print("END");
+
+  while (counter2 <= 100) {
+    print(counter2);
+    counter2 = counter2 + 2;
+  }
+  print("END");
+</script>
