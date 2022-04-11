@@ -1,0 +1,31 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: MULTIPLICATION TABLE</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  let number = parseInt(prompt("Enter a number:"));
+  let counter = 1;
+
+  print("WHILE:");
+
+  while (counter <= 10) {
+    print(number + " * " + counter + " = " + number * counter);
+    counter++;
+  }
+
+  print("FOR:");
+
+  for (let counter = 1; counter <= 10; counter++) {
+    print(number + " * " + counter + " = " + number * counter);
+  }
+</script>

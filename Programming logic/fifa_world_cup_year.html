@@ -1,0 +1,25 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: FIFA WORLD CUP</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  let fifaWorldCupYear = 1930;
+  let limit = parseInt(prompt("Enter a limit year:"));
+
+  while (fifaWorldCupYear <= limit) {
+    print(
+      "There has been a FIFA World Cup in the year: " + fifaWorldCupYear + "."
+    );
+    fifaWorldCupYear = fifaWorldCupYear + 4;
+  }
+</script>
