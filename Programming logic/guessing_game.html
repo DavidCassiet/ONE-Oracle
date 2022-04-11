@@ -13,16 +13,30 @@
     jumpLine();
   }
 
-  let number = Math.round(Math.random() * 10);
-  let chosenNumber = parseInt(prompt("Enter a number between 0 - 10:"));
+  function lottery(n) {
+    return Math.round(Math.random() * n);
+  }
+
+  //   let number = Math.round(Math.random() * 10);
+  let n = 40;
+  let number = lottery(n);
+  let chosenNumber = parseInt(prompt("Enter a number between 0 - " + n));
 
   if (chosenNumber == number) {
     print("You number is correct, YOU WIN!");
   } else {
-    print(
-      "You number is wrong, the number was " +
-        number +
-        ", better luck next time!"
-    );
+    if (chosenNumber < number) {
+      print(
+        "You number is wrong, the number was greater than " +
+          chosenNumber +
+          ", better luck next time!"
+      );
+    } else {
+      print(
+        "You number is wrong, the number was lower than " +
+          chosenNumber +
+          ", better luck next time!"
+      );
+    }
   }
 </script>
