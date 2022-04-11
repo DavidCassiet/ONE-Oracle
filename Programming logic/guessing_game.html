@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: GUESSING GAME</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  let number = Math.round(Math.random() * 10);
+  let chosenNumber = parseInt(prompt("Enter a number between 0 - 10:"));
+
+  if (chosenNumber == number) {
+    print("You number is correct, YOU WIN!");
+  } else {
+    print(
+      "You number is wrong, the number was " +
+        number +
+        ", better luck next time!"
+    );
+  }
+</script>

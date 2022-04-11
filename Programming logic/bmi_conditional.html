@@ -1,0 +1,41 @@
+<meta charset="UTF-8" />
+
+<h1>BMI CALCULATOR PROGRAM</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+  function calculateBmi(weight, height) {
+    let bmi = weight / (height * height);
+    return bmi;
+  }
+  function calculateAverage(bmi1, bmi2) {
+    let average = (bmi1 + bmi2) / 2;
+    return average;
+  }
+  let name = prompt("Enter your name:");
+  let weight = prompt(name + ", enter your weight:");
+  let height = prompt(name + ", enter your height:");
+  let calculatedBmi = Math.round(calculateBmi(weight, height));
+
+  // print(name + "'s calculated BMI is: " + calculatedBmi);
+
+  if (calculatedBmi < 18.5) {
+    print(name + ", your BMI is: " + calculatedBmi + ", you have underweight.");
+  } else if (calculatedBmi > 18.5 && calculatedBmi < 24.9) {
+    print(
+      name + ", your BMI is: " + calculatedBmi + ", you have a normal weight."
+    );
+  } else if (calculatedBmi >= 25 && calculatedBmi <= 29.9) {
+    print(name + ", your BMI is: " + calculatedBmi + ", you have pre-obesity.");
+  } else {
+    print(name + ", your BMI is: " + calculatedBmi + ", you have obesity.");
+  }
+</script>

@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: CAN I DRIVE?</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  let age = parseInt(prompt("How old are you?:"));
+
+  if (age > 18) {
+    let isLicensed = prompt("Do you have a license? Answer Y or N:");
+    if (isLicensed.toUpperCase() == "Y") {
+      print("Congratulations, you can drive!");
+    } else {
+      print("You can't drive.");
+    }
+  } else {
+    print("You can't drive.");
+  }
+</script>
