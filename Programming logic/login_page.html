@@ -1,0 +1,38 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: LOGIN PAGE</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  var registeredUsername = "alura";
+  var registeredPassword = "alura321";
+
+  let attempts = 3;
+
+  for (let i = 1; i <= attempts; i++) {
+    var enteredUsername = prompt("Enter username");
+    var enteredPassword = prompt("Enter password");
+    if (
+      registeredUsername == enteredUsername &&
+      registeredPassword == enteredPassword
+    ) {
+      alert("Welcome to the system " + enteredUsername);
+      break;
+    } else {
+      if (i != attempts) {
+        alert("Invalid login. Remaining attempts: " + (attempts - i));
+      } else {
+        alert("User blocked.");
+      }
+    }
+  }
+</script>
