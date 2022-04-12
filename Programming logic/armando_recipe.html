@@ -1,0 +1,30 @@
+<meta charset="UTF-8" />
+
+<h1>Armando's recipes</h1>
+
+<script>
+  let ingredients = [];
+  let quantity = parseInt(prompt("¿How many ingredients do you want to add?"));
+  let counter = 1;
+
+  while (counter <= quantity) {
+    let ingredient = prompt("Informe el ingrediente " + counter);
+    let finded = false;
+
+    for (let i = 0; i < ingredients.length; i++) {
+      if (ingredient == ingredients[i]) {
+        finded = true;
+        alert("Diplicated ingredient, try another.");
+        counter--;
+        break;
+      }
+
+      if (finded == false) {
+        ingredients.push(ingredient);
+        counter++;
+      }
+    }
+  }
+
+  console.log(ingredients);
+</script>
