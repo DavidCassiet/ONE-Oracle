@@ -1,0 +1,35 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAM: GUESSING GAME</h1>
+
+<script>
+  function jumpLine() {
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+  }
+  function print(text) {
+    document.write(text);
+    jumpLine();
+  }
+
+  function lottery(n) {
+    return Math.round(Math.random() * n);
+  }
+
+  let n = 10;
+  let number = lottery(n);
+  let attempts = 3;
+  let counter = 1;
+
+  while (counter <= attempts) {
+    let chosenNumber = parseInt(prompt("Enter a number between 0 - " + n));
+    if (number == chosenNumber) {
+      print("You number is correct, YOU WIN!");
+      break;
+    } else if (counter == 3) {
+      print("You loss, better luck next time!");
+    }
+    counter++;
+  }
+</script>
