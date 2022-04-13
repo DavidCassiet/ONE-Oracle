@@ -1,0 +1,58 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  let screen = document.querySelector("canvas");
+  let paintBrush = screen.getContext("2d");
+
+  paintBrush.fillStyle = "lightgrey";
+  paintBrush.fillRect(0, 0, 600, 400);
+
+  function designCircumference(x, y, radio, color) {
+    paintBrush.fillStyle = color;
+    paintBrush.beginPath();
+    paintBrush.arc(x, y, radio, 0, 2 * Math.PI);
+    paintBrush.fill();
+  }
+  function clearScreen() {
+    paintBrush.clearRect(0, 0, 600, 400);
+  }
+
+  let radio = 10;
+  let xRandom;
+  let yRandom;
+
+  function designTarget(x, y) {
+    designCircumference(x, y, radio + 20, "red");
+    designCircumference(x, y, radio + 10, "white");
+    designCircumference(x, y, radio, "red");
+  }
+
+  function rafflePosition(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function updateScreen() {
+    clearScreen();
+    xRandom = rafflePosition(600);
+    yRandom = rafflePosition(400);
+    designTarget(xRandom, yRandom);
+  }
+
+  setInterval(updateScreen, 800);
+
+  function shoot(event) {
+    let x = event.pageX - screen.offsetLeft;
+    let y = event.pageY - screen.offsetTop;
+
+    if (
+      x < xRandom + radio &&
+      x > xRandom - radio &&
+      y < yRandom + radio &&
+      y > yRandom - radio
+    ) {
+      alert("Good shoot");
+    }
+  }
+
+  screen.onclick = shoot;
+</script>

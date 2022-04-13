@@ -1,0 +1,40 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  let screen = document.querySelector("canvas");
+  let paintBrush = screen.getContext("2d");
+
+  paintBrush.fillStyle = "lightgrey";
+  paintBrush.fillRect(0, 0, 600, 400);
+
+  function designCircumference(x, y, radio) {
+    paintBrush.fillStyle = "blue";
+    paintBrush.beginPath();
+    paintBrush.arc(x, y, radio, 0, 2 * Math.PI);
+    paintBrush.fill();
+  }
+  function clearScreen() {
+    paintBrush.clearRect(0, 0, 600, 400);
+  }
+
+  let x = 0;
+  let counter = 0;
+
+  function updateScreen() {
+    if (counter == 0) {
+      x++;
+      if (x == 600) {
+        counter = 600;
+      }
+    } else if (counter == 600) {
+      x--;
+      if (x == 0) {
+        counter = 0;
+      }
+    }
+    clearScreen();
+    designCircumference(x, 20, 10);
+  }
+
+  setInterval(updateScreen, 5);
+</script>
