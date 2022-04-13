@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  let screen = document.querySelector("canvas");
+  let paintBrush = screen.getContext("2d");
+
+  paintBrush.fillStyle = "grey";
+  paintBrush.fillRect(0, 0, 600, 400);
+
+  let colors = ["blue", "red", "green"];
+  let i = 0;
+
+  function drawCircle(event) {
+    let x = event.pageX - screen.offsetLeft;
+    let y = event.pageY - screen.offsetTop;
+
+    paintBrush.fillStyle = colors[i];
+    paintBrush.beginPath();
+    paintBrush.arc(x, y, 10, 0, 2 * 3.14);
+    paintBrush.fill();
+
+    console.log(x + ", " + y);
+  }
+
+  function changeColor(event) {
+    if (i < colors.length - 1) {
+      i = i + 1;
+    } else {
+      i = 0;
+    }
+    color = colors[i];
+    return false;
+  }
+
+  screen.onclick = drawCircle;
+  screen.oncontextmenu = changeColor;
+</script>

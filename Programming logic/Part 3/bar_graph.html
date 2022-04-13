@@ -1,0 +1,39 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  function drawSquare(x, y, weight, height, color) {
+    let screen = document.querySelector("canvas");
+    let paintBrush = screen.getContext("2d");
+
+    paintBrush.fillStyle = color;
+    paintBrush.fillRect(x, y, weight, height);
+    paintBrush.strokeStyle = "black";
+    paintBrush.strokeRect(x, y, weight, height);
+  }
+
+  function writeText(x, y, text) {
+    let screen = document.querySelector("canvas");
+    let paintBrush = screen.getContext("2d");
+
+    paintBrush.font = "15px Georgia";
+    paintBrush.fillStyle = "black";
+    paintBrush.fillText(text, x, y);
+  }
+
+  function drawBar(x, y, serie, colors, text) {
+    writeText(x, y - 10, text);
+    let counter = 0;
+
+    for (let i = 0; i < serie.length; i++) {
+      drawSquare(x, y + counter, 50, serie[i], colors[i]);
+      counter = counter + serie[i];
+    }
+  }
+
+  let serie2009 = [6, 47, 41, 3, 3];
+  let serie2019 = [81, 9, 3, 3, 4];
+  let colors = ["blue", "green", "yellow", "red", "grey"];
+
+  drawBar(50, 50, serie2009, colors, "2009");
+  drawBar(150, 50, serie2019, colors, "2019");
+</script>
