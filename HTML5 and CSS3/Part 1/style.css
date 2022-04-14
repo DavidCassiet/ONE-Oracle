@@ -1,8 +1,17 @@
-body {
-  background: #cccccc;
+.main-title {
+  padding-left: 30px;
 }
 
-h1 {
+#banner {
+  width: 100%;
+}
+
+.main {
+  background: #cccccc;
+  padding: 20px;
+}
+
+.centered-title {
   text-align: center;
 }
 
@@ -18,10 +27,21 @@ em strong {
   font-size: 20px;
 }
 
-#banner {
-  width: 100%;
+.qualities {
+  background: #ffffff;
+  padding: 30px;
 }
 
 .items {
   font-style: italic;
+}
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin-right: 15%;
+}
+
+.qualitiesImage {
+  width: 50%;
 }
