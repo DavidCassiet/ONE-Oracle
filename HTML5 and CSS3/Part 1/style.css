@@ -1,10 +1,27 @@
 body {
   background: #cccccc;
 }
+
+h1 {
+  text-align: center;
+}
+
 p {
   text-align: center;
 }
 
 em strong {
   color: red;
+}
+
+#mission {
+  font-size: 20px;
+}
+
+#banner {
+  text-align: center;
+}
+
+img {
+  width: 100%;
 }
