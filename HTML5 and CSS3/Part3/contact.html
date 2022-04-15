@@ -26,16 +26,67 @@
     <main>
       <form action="">
         <label for="fullname">Nombre y Apellido:</label>
-        <input type="text" id="fullname" />
+        <input type="text" id="fullname" class="input-data" />
 
         <label for="email">Email:</label>
-        <input type="text" id="email" />
+        <input type="email" id="email" class="input-data" />
 
         <label for="cellphone">Teléfono:</label>
-        <input type="text" id="cellphone" />
+        <input type="tel" id="cellphone" class="input-data" />
 
-        <button type="submit">Enviar</button>
-        <input type="submit" value="Enviar2" />
+        <label for="mensaje">Mensaje:</label>
+        <textarea
+          id="mensaje"
+          cols="70"
+          rows="10"
+          class="input-data"
+        ></textarea>
+
+        <div>
+          <p>¿Cómo le gustaría que lo contactemos?:</p>
+
+          <label for="radio-email"
+            ><input
+              type="radio"
+              name="contact"
+              value="email"
+              id="radio-email"
+            />Email</label
+          >
+
+          <label for="radio-cellphone"
+            ><input
+              type="radio"
+              name="contact"
+              value="cellphone"
+              id="radio-cellphone"
+            />Teléfono</label
+          >
+
+          <label for="radio-whatsapp"
+            ><input
+              type="radio"
+              name="contact"
+              value="whatsapp"
+              id="radio-whatsapp"
+            />WhatsApp</label
+          >
+        </div>
+
+        <div>
+          <p>¿En cúal horario prefiere ser atendido?</p>
+          <select>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+          </select>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" />¿Le gustaría recibir novedades de la Barbería
+          Alura?
+        </label>
+        <input type="submit" value="Enviar" />
       </form>
     </main>
 

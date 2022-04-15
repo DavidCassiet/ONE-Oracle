@@ -14,12 +14,10 @@ nav {
   top: 110px;
   right: 0;
 }
-
 nav li {
   display: inline;
   margin: 0 0 0 15px;
 }
-
 nav a {
   text-transform: uppercase;
   color: #000000;
@@ -27,7 +25,6 @@ nav a {
   font-size: 22px;
   text-decoration: none;
 }
-
 nav a:hover {
   color: #c78c19;
   text-decoration: underline;
@@ -38,7 +35,6 @@ nav a:hover {
   margin: 0 auto;
   padding: 50px;
 }
-
 .products li {
   display: inline-block;
   text-align: center;
@@ -50,28 +46,22 @@ nav a:hover {
   border: 2px solid #000000;
   border-radius: 10px;
 }
-
 .products li:hover {
   border-color: #c78c19;
 }
-
 .products li:active {
   border-color: blue;
 }
-
 .products h2 {
   font-size: 30px;
   font-weight: bold;
 }
-
 .products li:hover h2 {
   font-size: 33px;
 }
-
 .product-description {
   font-size: 18px;
 }
-
 .product-price {
   font-size: 20px;
   font-weight: bold;
@@ -88,4 +78,30 @@ footer {
   color: #ffffff;
   font-size: 13px;
   margin: 20px;
+}
+
+main {
+  width: 940px;
+  margin: 0 auto;
+}
+
+form {
+  margin: 40px 0;
+}
+form label,
+form p {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-data {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
 }
